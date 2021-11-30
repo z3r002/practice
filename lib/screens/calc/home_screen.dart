@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:practice/screens/widgets/displayer.dart';
-import 'package:practice/screens/widgets/keyboart.dart';
+import 'package:practice/screens/calc/widgets/displayer.dart';
+import 'package:practice/screens/calc/widgets/keyboart.dart';
 import 'package:practice/utils/utils.dart';
 
-import '../calculator.dart';
-import '../constants.dart';
-
+import '../../calculator.dart';
+import '../../constants.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
