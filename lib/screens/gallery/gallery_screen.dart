@@ -4,6 +4,6 @@ import 'package:practice/screens/gallery/widgets/custom_grid_view.dart';
 class GallaryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: CustomGridView(count: 2));
+    return SafeArea(child: Scaffold(body: CustomGridView(count: 2)));
   }
 }

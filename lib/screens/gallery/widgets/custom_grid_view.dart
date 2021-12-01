@@ -8,7 +8,7 @@ class CustomGridView extends StatelessWidget {
   final ProductController productController = Get.put(ProductController());
   final int count;
 
-  CustomGridView({required this.count});
+  CustomGridView({Key? key, required this.count}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +16,9 @@ class CustomGridView extends StatelessWidget {
       children: [
         Expanded(
           child: Obx(() {
-            if (productController.isLoading.value)
-              return Center(child: CircularProgressIndicator());
-            else
+            if (productController.isLoading.value) {
+              return const Center(child: CircularProgressIndicator());
+            } else {
               return GridView.builder(
                 itemCount: productController.productList.length,
                 itemBuilder: (context, index) {
@@ -29,6 +29,7 @@ class CustomGridView extends StatelessWidget {
                     crossAxisSpacing: 16,
                     mainAxisSpacing: 16),
               );
+            }
           }),
         )
       ],

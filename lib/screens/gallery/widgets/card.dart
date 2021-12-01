@@ -1,15 +1,27 @@
 import 'package:flutter/material.dart';
 
 import '../Product.dart';
+import '../photo_screen.dart';
 
 class ProductTile extends StatelessWidget {
   final Product product;
 
   const ProductTile(this.product);
 
+
   @override
   Widget build(BuildContext context) {
-    return Container(
+    print(product.id);
+    print(product.thumbnailUrl);
+    return GestureDetector(
+      onTap: (){
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => PhotoPage(image: product.thumbnailUrl,),
+          ),
+        );
+      },
       child: Card(
         elevation: 2,
         child: Padding(

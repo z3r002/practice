@@ -21,11 +21,11 @@ class Displayer extends StatelessWidget {
                 primaryText,
                 maxLines: 1000,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(color: Colors.white, fontSize: 36),
+                style: const TextStyle(color: Colors.white, fontSize: 36),
               ),
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
         ],
       ),
     );
