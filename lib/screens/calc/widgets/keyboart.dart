@@ -5,13 +5,15 @@ import 'keyboard_button.dart';
 
 class Keyboard extends StatelessWidget {
   final Function passToButton;
+
   Keyboard(this.passToButton);
 
   Widget rowButton(List<String> buttons) {
     return Expanded(
       child: Row(
         children: buttons
-            .map((id) => KeyboardButton(id: id, onPressed: () => passToButton(id)))
+            .map((id) =>
+                KeyboardButton(id: id, onPressed: () => passToButton(id)))
             .toList(),
       ),
     );

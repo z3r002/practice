@@ -4,10 +4,9 @@ import 'package:practice/constants.dart';
 class KeyboardButton extends StatelessWidget {
   final String id;
   final VoidCallback onPressed;
- KeyboardButton({required this.id, required this.onPressed});
 
-  
-  
+  KeyboardButton({required this.id, required this.onPressed});
+
   @override
   Widget build(BuildContext context) {
     return Expanded(

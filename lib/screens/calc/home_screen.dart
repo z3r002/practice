@@ -27,12 +27,10 @@ class _HomeScreenState extends State<HomeScreen> {
         } else if (id == ButtonId.backspace) {
           _primaryDisplayerText =
               _primaryDisplayerText.replaceAll(RegExp(r'.$'), '');
-        } else if (id == ButtonId.binToDec){
+        } else if (id == ButtonId.binToDec) {
           _primaryDisplayerText = binaryToDecimal(_primaryDisplayerText);
-
         } else if (id == ButtonId.decToBin) {
           _primaryDisplayerText = decimalToBinary(_primaryDisplayerText);
-
         } else {
           _primaryDisplayerText += id;
         }
@@ -48,7 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
           children: <Widget>[
             Expanded(
               child: Displayer(
-                  primaryText: _primaryDisplayerText,),
+                primaryText: _primaryDisplayerText,
+              ),
             ),
             Expanded(
               flex: 2,

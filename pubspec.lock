@@ -172,6 +172,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.13.0"
+  random_password_generator:
+    dependency: "direct main"
+    description:
+      name: random_password_generator
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.1"
   responsive_builder:
     dependency: "direct main"
     description:

@@ -8,17 +8,16 @@ class ProductTile extends StatelessWidget {
 
   const ProductTile(this.product);
 
-
   @override
   Widget build(BuildContext context) {
-    print(product.id);
-    print(product.thumbnailUrl);
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => PhotoPage(image: product.thumbnailUrl,),
+            builder: (context) => PhotoPage(
+              image: product.thumbnailUrl,
+            ),
           ),
         );
       },
